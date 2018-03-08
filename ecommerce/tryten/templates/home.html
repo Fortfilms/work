@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block head_title %} WELCOME || {{ block.super }}{% endblock head_title %}
+{% block content %}
+<div class="container">
+<h3>.............................</h3>
+<p>There is {{html_var}} characters.</p>
+<p>
+	No is {{ num }}</br>
+	{% for some_item in some_list %}
+	{% if some_item|divisibleby:"2" %}
+		Even Number
+	{% endif %}
+	{{ some_item }}
+	</br>
+	{% endfor %}
+</p>
+</div>
+{% endblock content %}

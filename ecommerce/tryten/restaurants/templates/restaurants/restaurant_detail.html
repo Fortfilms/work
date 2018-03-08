@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block head_title %} RESTAURANTS || {{ block.super }}{% endblock head_title %}
+{% block content %}
+<div class="container">
+<h1>{{ object.name }}<small>{{ object.category }}</small></h1>
+{{ object.timestamp }}UPDATED {{ object.updated }}
+
+<form method='POST'> {% csrf_token %}
+    {{ form.as_p }}
+    <button type='submit'>Save</button>
+</form>
+</div>
+{% endblock content %}

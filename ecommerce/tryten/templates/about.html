@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block head_title %} ABOUT || {{ block.super }}{% endblock head_title %}
+{% block content %}
+<!DOCTYPE html>
+<html lang=en>
+<head>
+</head>
+<body>
+<div class="container">
+<h1>ABOUT</h1>
+<h1>{{ block.super }}
+<h3>.............................</h3>
+<p>There is {{html_var}} characters.</p>
+<p>
+	No is {{ num }}</br>
+	{% for some_item in some_list %}
+	{% if some_item|divisibleby:"2" %}
+		Even Number
+	{% endif %}
+	{{ some_item }}
+	</br>
+	{% endfor %}
+</p>
+</div>
+</body>
+</html>
+{% endblock content %}

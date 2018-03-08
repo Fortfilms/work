@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<title>{% block head_title %} Moviepicky.com {% endblock head_title %}</title>
+{% include 'snipets/css.html' %}
+</head>
+<body>
+{% block content %}<h1>Muvypicky.com</h1>{% endblock content %}
+{% include 'snipets/nav.html' %}
+
+<div class="container">
+	{% block content2 %}{% endblock content2 %}
+</div>
+{% include 'snipets/js.html' %}
+</body>
+</html>

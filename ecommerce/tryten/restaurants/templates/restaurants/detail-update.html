@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block head_title %} RESTAURANTS || {{ block.super }}{% endblock head_title %}
+{% block content %}
+
+<div class='row'>
+	<div>
+		{ if form.instance.location %}
+		<h3> update</h3>
+		{%else%}
+		<h3> create</h3>
+		{%endif%}
+		<hr>
+		<form method="POST">{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit">Save</button>
+		</form>
+	</div>
+</div>	
+{% endblock content %}
